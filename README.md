@@ -13,3 +13,5 @@ git clone https://github.com/gmailzj/Mocky
 npm install
 
 npm start
+
+http://localhost:3000

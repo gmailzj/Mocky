@@ -1,5 +1,5 @@
 /node_modules/*
-
+/fs/
 npm-debug.log
 coverage
 .DS_Store
