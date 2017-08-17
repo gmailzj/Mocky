@@ -1,0 +1,15 @@
+{
+    "Customer": {
+        "dbConfig": {
+            "host": "localhost",
+            "port": 3306,
+            "dbName": "customers"
+        },
+        "siteConfig": {
+            "title": "default environment"
+        },
+        "fs": {
+            "outputDir": "/fs/"
+        }
+    }
+}

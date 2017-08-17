@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>Mocky: Real HTTP mocking</title>
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+
+    <link rel="stylesheet" media="screen" href="assets/stylesheets/main.css">
+    <script src="assets/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="assets/js/select2.js" type="text/javascript"></script>
+    <script src="assets/js/lodash-1.2.1.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero-unit">
+            <div class="flags">
+                <!-- <a href="/lang/fr"><img src="/assets/img/flags/fr.png" alt="FR" /></a>
+                <a href="/lang/en"><img src="/assets/img/flags/us.png" alt="US" /></a>
+                <a href="/lang/pt-BR"><img src="/assets/img/flags/pt-br.png" alt="PT-BR" /></a><br /> -->
+
+                <!-- <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="http://www.mocky.io" data-related="julien_lafont" data-via="julien_lafont" data-t ext="Mock your HTTP responses to test your REST API">Tweet</a> -->
+                <!-- <script>
+                    ! function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "https://platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");
+                </script> -->
+            </div>
+            <h1>Mocky</h1>
+            <h2>Mock your HTTP responses to test your REST API</h2>
+            <pre>&gt; PUT http://www.mocky.io/v2/<span>5185415ba171ea3a00704eed</span></pre>
+            <pre>< HTTP/1.1 200 OK
+< Content-Type: application/json; charset=UTF-8
+{ "<span>hello</span>": "<span>world</span>" }</pre>
+        </div>
+
+
+        <form class="form-horizontal" action="/" method="post" id="new-mocky-form">
+
+
+
+            <div class="alert" id="feedback">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <p></p>
+                <!--Do not remove...-->
+            </div>
+
+            <!-- <div class="alert alert-success" id="feedback" style="display: block;">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <p><strong>Your link is ready:</strong> <a href="http://www.mocky.io/v2/5985d3ed110000c80b2a8a9f" target="blank">http://www.mocky.io/v2/5985d3ed110000c80b2a8a9f</a></p>
+            </div> -->
+
+            <div class="alert alert-info" id="confidential-alert">
+                Now with <strong>JSONP</strong> support, just add <strong>?callback=myfunction</strong> to your links.
+            </div>
+
+
+
+            <fieldset>
+                <legend>Generate your custom response</legend>
+
+                <div class="control-group">
+                    <label class="control-label" for="statusCode">Status Code</label>
+                    <div class="controls">
+                        <input type="text" id="statusCode" name="statuscode" />
+                    </div>
+                </div>
+                <div class="control-group hide" id="location-block">
+                    <label class="control-label" for="location">Location</label>
+                    <div class="controls">
+                        <input type="text" id="location" name="location" placeholder="Redirect URI" class="input-xlarge" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="contentType">Content Type</label>
+                    <div class="controls">
+                        <input type="text" id="contentType" name="contenttype" /> &nbsp;
+                        <input type="text" id="charset" name="charset" />
+                    </div>
+                </div>
+
+                <div class="advanced-block hide">
+                    <div class="control-group">
+                        <label class="control-label" for="editor">Custom headers</label>
+                        <div class="controls" id="advanced-block-inner">
+                            <p class="clone">
+                                <input class="span2" type="text" name="headerNames[]"> :
+                                <input class="span4" type="text" name="headerValues[]">
+                                <a class="btn btn-success btn-mini btn-add-header"><i class="icon icon-plus icon-white"></i></a>
+                            </p>
+                        </div>
+                        <div class="controls">
+                            <span class="help-block">Eg: ETag, If-None-Match, Expires, Last-Modified, Server, X-Cache, Cache-Control,<br /> X-Frame-Options, Server, Set-Cookie, X-UA-Compatible...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="editor">Body</label>
+                    <div class="controls">
+                        <div id="editor"></div>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn btn-primary" id="send-btn">Generate my HTTP Response</button>
+                        <a href="index.html#" class="btn btn-advanced-mode">Switch to advanced mode</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+
+        <hr />
+        <footer>
+            <p>
+                <strong class="alert alert-success">Inspired sponsored by <a href="https://github.com/studiodev/Mocky"".com/" target="_blank">Mocky</a></strong> </a>
+                <a href="https://github.com/gmailzj/Mocky" target="_blank"><img src="/assets/img/octocat.png" /></a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="referentials/i18n.js" type="text/javascript"></script>
+    <script src="referentials/http.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+
+    <script src="assets/js/ace/ace.js" type="text/javascript"></script>
+    <script src="assets/js/eruda.min.js"></script>
+    <script>
+        if (/eruda=true/.test(window.location)) {
+            eruda.init();
+        }
+    </script>
+</body>
+
+</html>

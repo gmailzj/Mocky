@@ -1,0 +1,31 @@
+Mocky=Mocky
+
+title.home=Mocky: Real HTTP mocking
+presentation.baseline=Mock your HTTP responses to test your REST API
+
+error.invalidForm=Invalid form, please retry ;)
+error.retry=An error occured... please retry !
+
+alert.confidential=Do not publish confidential information!
+alert.dataStored=Your data will be stored in a
+alert.gist=private gist
+alert.linkReady=Your link is ready:
+
+form.legend=Generate your custom response
+form.code=Status Code
+form.location=Location
+form.contentType=Content Type
+form.customHeaders=Custom headers
+form.body=Body
+
+btn.generate=Generate my HTTP Response
+btn.advanced=Switch to advanced mode
+btn.basic=Switch to basic mode
+btn.wait=A dwarf will handle your request, please wait...
+
+eg=Eg:
+feedback=Give feedback!
+
+overloaded=Mocky is <strong>slightly overloaded</strong> due to the official release, thank you for being patient. We are working hard to improve the quality of service, a <strong>new architecture</strong> will be released soon!
+
+news.jsonp=Now with <strong>JSONP</strong> support, just add <strong>?callback=myfunction</strong> to your links.

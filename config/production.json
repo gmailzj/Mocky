@@ -1,0 +1,10 @@
+{
+    "Customer": {
+        "dbConfig": {
+            "host": "prod-db-server"
+        },
+        "siteConfig": {
+            "title": "production environment"
+        }
+    }
+}

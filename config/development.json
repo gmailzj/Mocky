@@ -1,0 +1,10 @@
+{
+    "Customer": {
+        "dbConfig": {
+            "host": "devel-db-server"
+        },
+        "siteConfig": {
+            "title": "devel environment"
+        }
+    }
+}
