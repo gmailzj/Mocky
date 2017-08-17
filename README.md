@@ -8,6 +8,8 @@ or when you want to test your WS client.
 [Mocky](http://www.mocky.io/ ) nodejs  version
 
 ## How to do:
+git clone https://github.com/gmailzj/Mocky
+
 npm install
 
 npm start
