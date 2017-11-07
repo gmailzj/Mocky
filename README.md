@@ -10,8 +10,10 @@ or when you want to test your WS client.
 ## How to do:
 git clone https://github.com/gmailzj/Mocky
 
+cd Mocky
+
 npm install
 
-npm start
+PORT=3000 npm start
 
 http://localhost:3000

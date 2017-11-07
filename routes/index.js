@@ -45,8 +45,10 @@ router.get(/\/([a-z0-9]{32})$/, async(ctx, next) => {
         if (mocker.location) {
             ctx.set("Location", mocker.location);
         }
+        ctx.body = mocker.body;
+    } else {
+        next();
     }
-    ctx.body = mocker.body;
 })
 
 router.get('/', async(ctx, next) => {
